@@ -1,0 +1,36 @@
+name: Deploy naar SmarterASP 
+
+on:
+  push:
+    branches:
+      - main  # Dit zorgt dat het start als iemand naar 'main' pusht
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Haal de code op uit de repo
+    - name: 🚚 Code Ophalen
+      uses: actions/checkout@v3
+
+    # 2. Installeer .NET op de GitHub server
+    - name: 🛠️ Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x' # Pas dit aan als jullie .NET 6 of 7 gebruiken
+
+    # 3. Bouw de website (Compileren)
+    - name: 🏗️ Bouwen en Publiceren
+      run: dotnet publish -c Release -o ./publish_output
+
+    # 4. Uploaden naar SmarterASP via FTP
+    - name: 📂 Uploaden naar FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./publish_output/
+
+        server-dir: /  # Dit zet het in de hoofdmap van je site
