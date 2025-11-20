@@ -33,4 +33,4 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./publish_output/
 
-        server-dir: /  # Dit zet het in de hoofdmap van je site
+        server-dir: /site1/  # Dit zet het in de hoofdmap van je site
