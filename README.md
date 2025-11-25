@@ -7,12 +7,12 @@ Welkom bij de repository van ons reserveringssysteem.
 
 
 ## 🔗 Belangrijke Links
-- **Live Website:** [PLAK HIER JE SMARTERASP LINK]
-- **Trello Bord:** [PLAK HIER LINK]
+- **Live Website:** 
+- **Trello Bord:** 
 
 ## 🛠️ Technische Info
 - **Framework:** .NET 8 (ASP.NET Core)
-- **Database:** MSSQL (Hosted op SmarterASP)
+- **Database:** 
 - **Hosting:** SmarterASP.NET (via FTP Deploy)
 
 ## 👨‍💻 Voor het team
