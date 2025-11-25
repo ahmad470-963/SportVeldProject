@@ -1,6 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
+app.UseHttpsRedirection();
 // 1. Dit zorgt dat het Software-team straks HTML-bestanden kan gebruiken
 app.UseDefaultFiles();
 app.UseStaticFiles();
