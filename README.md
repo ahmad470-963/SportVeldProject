@@ -8,7 +8,6 @@ Welkom bij de repository van ons reserveringssysteem.
 
 ## 🔗 Belangrijke Links
 - **Live Website:** http://ahmad0416-001-site1.anytempurl.com/
-- **Trello Bord:** 
 
 ## 🛠️ Technische Info
 - **Framework:** .NET 8 (ASP.NET Core)
