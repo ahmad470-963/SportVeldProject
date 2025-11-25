@@ -1,10 +1,11 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-// 1. Zorg dat de server in de wwwroot map mag kijken
+// 1. Dit zorgt dat het Software-team straks HTML-bestanden kan gebruiken
+app.UseDefaultFiles();
 app.UseStaticFiles();
 
-// 2. (Optioneel) Als iemand geen bestandsnaam typt, zoek dan naar index.html of default.html
-app.UseDefaultFiles(); 
+// 2. DIT IS DE FIX: Een duidelijke boodschap op de startpagina ("/")
+app.MapGet("/", () => "HOERA! De server werkt! 🟢\n\nInfra Team: De pipeline is geslaagd.\nSoftware Team: Jullie kunnen nu jullie eigen code pushen.");
 
 app.Run();
