@@ -22,7 +22,7 @@ jobs:
 
     # 3. Bouw de website (Compileren)
     - name: 🏗️ Bouwen en Publiceren
-      run: run: dotnet publish Central Sports.csproj -c Release -o ./publish_output --self-contained true -r win-x64
+      run: dotnet publish Central Sports.csproj -c Release -o ./publish_output --self-contained true -r win-x64
 
 
     # 4. Uploaden naar SmarterASP via FTP
