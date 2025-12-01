@@ -1,0 +1,364 @@
+<head>
+	<Style>
+		body {
+			margin: 0px;
+			background-color: #457B9D
+		}
+
+		.ContainerBoven {}
+
+		.bovensteSector {
+			height: 250px;
+			width: 1800px;
+			background-color: #A8DADC
+		}
+
+		#Central_Sports {
+			font-size: 48px;
+			font-family: 'arial';
+			position: relative;
+			left: 0px;
+			color: #E63946;
+		}
+
+		#Logo {
+			background-color: coral;
+			position: realtive;
+			float: right;
+			height: 250px;
+			width: 250px;
+		}
+
+		#Central_Sports span {
+			background-color: #F1FAEE;
+			outline: 8px solid #F1FAEE;
+		}
+
+		#Vultekst {
+			font-family: 'arial';
+			color: #E63946;
+		}
+
+		#Vultekst span {
+			background-color: #F1FAEE;
+			outline: 8px solid #F1FAEE;
+		}
+
+		.Knopvlak {
+			width: 1800px;
+			height: 200px;
+			background-color: #1D3557;
+		}
+
+		.Container {
+			display: flex;
+			column-gap 0px;
+			font-weight: bold;
+			font-family: 'arial'
+		}
+
+		.Reserveren {
+			height: 160px;
+			width: 350px;
+			background-color: #F1FAEE;
+			color: #1D3557;
+			margin-top: 20px;
+			margin-right: 40px;
+			margin-bottom: 20px;
+			margin-left: 40px;
+			text-align: center;
+			text-decoration: underline;
+			font-size: 48px;
+			font-family: 'arial';
+			font-color: #1D3557;
+		}
+
+		.Reserveren:Hover {
+			color: #1D3557;
+		}
+
+		.Webshop {
+			height: 160px;
+			width: 350px;
+			background-color: #F1FAEE;
+			color: #E63946;
+			margin-top: 20px;
+			margin-right: 40px;
+			margin-bottom: 20px;
+			margin-left: 40px;
+			text-align: center;
+			text-decoration: underline;
+			font-size: 48px;
+			font-family: 'arial';
+		}
+
+		.Webshop:Hover {
+			color: #1D3557;
+		}
+
+		.Account {
+			height: 160px;
+			width: 350px;
+			background-color: #F1FAEE;
+			color: #E63946;
+			margin-top: 20px;
+			margin-right: 40px;
+			margin-bottom: 20px;
+			margin-left: 40px;
+			text-align: center;
+			text-decoration: underline;
+			font-size: 48px;
+			font-family: 'arial';
+		}
+
+		.Account:Hover {
+			color: #1D3557;
+		}
+
+		.Contact {
+			height: 160px;
+			width: 350px;
+			background-color: #F1FAEE;
+			color: #E63946;
+			margin-top: 20px;
+			margin-right: 40px;
+			margin-bottom: 20px;
+			margin-left: 40px;
+			text-align: center;
+			text-decoration: underline;
+			font-size: 48px;
+			font-family: 'arial';
+		}
+
+		.Contact:Hover {
+			color: #1D3557;
+		}
+
+		.Typvlak {
+			Background-color: #F1FAEE;
+			top-margin: 10px;
+			right-margin: 10px;
+			bottom-margin: 0px;
+			left-margin: 10px;
+			height: 2000px;
+			width: 1800px;
+		}
+
+		.Typvlak2 {
+			display: flex;
+			font-family: 'arial';
+			font-weight: bold;
+		}
+
+		.Baanveld1 {
+			font-size: 32px;
+			color: #E63946;
+			background-color: #F1FAEE;
+			margin-top: 40px;
+			margin-left: 40px;
+			margin-right: 270px;
+			margin-bottom: 5px;
+			height: 35px;
+			width: 120px;
+			outline: 4px solid #1D3557;
+		}
+
+		.Baanveld2 {
+			font-size: 32px;
+			color: #E63946;
+			background-color: #F1FAEE;
+			margin-top: 40px;
+			margin-left: 40px;
+			margin-right: 270px;
+			margin-bottom: 0px;
+			height: 35px;
+			width: 120px;
+			outline: 4px solid #1D3557;
+		}
+
+		.Baanveld3 {
+			font-size: 32px;
+			color: #E63946;
+			background-color: #F1FAEE;
+			margin-top: 40px;
+			margin-left: 40px;
+			margin-right: 270px;
+			margin-bottom: 0px;
+			height: 35px;
+			width: 120px;
+			outline: 4px solid #1D3557;
+		}
+
+		.Baanveld4 {
+			font-size: 32px;
+			color: #E63946;
+			background-color: #F1FAEE;
+			margin-top: 40px;
+			margin-left: 40px;
+			margin-right: 40px;
+			margin-bottom: 0px;
+			height: 35px;
+			width: 120px;
+			outline: 4px solid #1D3557;
+		}
+
+		.BaanwaardenCompleet {
+			disply: flex;
+			Font-family: 'arial';
+			font-weight: bold;
+			font-size: 24px;
+		}
+
+		.Baanwaarden1 {
+			margin-left: 40px;
+			margin-right: ;
+			margin-bottom: 5px;
+			color: #E63946;
+			height: 250px;
+			width: 280px;
+			outline: 4px solid #1D3557;
+		}
+
+		.Baanwaarden2 {
+			position: relative;
+			left: 430px;
+			top: -1020px;
+			margin-left: 40px;
+			margin-right: ;
+			margin-bottom: 5px;
+			color: #E63946;
+			height: 250px;
+			width: 280px;
+			outline: 4px solid #1D3557;
+		}
+
+		.Baanwaarden3 {
+			position: relative;
+			left: 860px;
+			top: -2040px;
+			margin-left: 40px;
+			margin-right: ;
+			margin-bottom: 5px;
+			color: #E63946;
+			height: 250px;
+			width: 280px;
+			outline: 4px solid #1D3557;
+		}
+
+		.Baanwaarden4 {
+			position: relative;
+			left: 1290px;
+			top: -3060px;
+			margin-left: 40px;
+			margin-right: ;
+			margin-bottom: 5px;
+			color: #E63946;
+			height: 250px;
+			width: 280px;
+			outline: 4px solid #1D3557;
+		}
+
+		.button {
+			height: 40px;
+			width: 120px;
+			font-family: 'Arial';
+			font-weight: bold;
+			background-color: #A8DADC;
+			color: #E63946;
+			font-size: 15px;
+			float: right;
+			outline: 2px solid #1D3557
+		}
+	</Style>
+
+</head>
+
+<body>
+	<div class="ContainerBoven">
+		<div class="bovensteSector">
+			<div id="Logo"></div>
+			<br>
+			<h1 id="Central_Sports"><span>CENTRAL SPORTS</span></h1>
+			<h1 id="Vultekst"><span>LOREM IPSUM</span></h1>
+			<br>
+  </div>
+		</div>
+		<div class="Knopvlak">
+			<div class="Container">
+				<div class="Reserveren"><br>RESERVEREN</div>
+					<div class="Webshop"><br>WEBSHOP</div>
+						<div class="Account"><br>ACCOUNT</div>
+							<div class="Contact"><br>CONTACT</div>
+							</div>
+						</div>
+						<div class="Typvlak">
+							<div class="Typvlak2">
+								<div class="Baanveld1">VELD.1</div>
+								<div class="Baanveld2">VELD.2</div>
+								<div class="Baanveld3">VELD.3</div>
+								<div class="Baanveld4">VELD.4</div>
+							</div>
+							<div class="BaanwaardenCompleet">
+								<div class="Baanwaarden1">
+									<br>9.00 - 10.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+								<div class="Baanwaarden1">
+									<br>11.00 - 12.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+								<div class="Baanwaarden1">
+									<br>13.00 - 14.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+								<div class="Baanwaarden1">
+									<br>15.00 - 16.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+
+								<!--Deze sector onder veld 2 op een of andere manier brengen-->
+								<div class="Baanwaarden2">
+									<br>9.00 - 10.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+								<div class="Baanwaarden2">
+									<br>11.00 - 12.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+								<div class="Baanwaarden2">
+									<br>13.00 - 14.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+								<div class="Baanwaarden2">
+									<br>15.00 - 16.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+
+								<!--Deze sector onder veld 3 op een of andere manier brengen-->
+								<div class="Baanwaarden3">
+									<br>9.00 - 10.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+								<div class="Baanwaarden3">
+									<br>11.00 - 12.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+								<div class="Baanwaarden3">
+									<br>13.00 - 14.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+								<div class="Baanwaarden3">
+									<br>15.00 - 16.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+								<!--Deze sector onder veld 4 op een of andere manier brengen-->
+								<div class="Baanwaarden4">
+									<br>9.00 - 10.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+								<div class="Baanwaarden4">
+									<br>11.00 - 12.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+								<div class="Baanwaarden4">
+									<br>13.00 - 14.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+								<div class="Baanwaarden4">
+									<br>15.00 - 16.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+</body>
