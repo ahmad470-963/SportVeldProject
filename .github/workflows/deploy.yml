@@ -22,7 +22,8 @@ jobs:
 
     # 3. Bouw de website (Compileren)
     - name: 🏗️ Bouwen en Publiceren
-      run: dotnet publish -c Release -o ./publish_output
+      run: dotnet publish "Central Sports.sln" -c Release -o ./publish_output
+
 
     # 4. Uploaden naar SmarterASP via FTP
     - name: 📂 Uploaden naar FTP
