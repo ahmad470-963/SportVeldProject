@@ -1,3 +1,7 @@
+@{
+ViewBag.Title = "Reserveren";
+}
+<head>
 <head>
 	<Style>
 		body {
@@ -71,6 +75,9 @@
 			font-size: 48px;
 			font-family: 'arial';
 			font-color: #1D3557;
+	display: block;
+	cursor: pointer;
+	text-decoration:underline;
 		}
 
 		.Reserveren:Hover {
@@ -90,11 +97,53 @@
 			text-decoration: underline;
 			font-size: 48px;
 			font-family: 'arial';
+	display: block;
+	cursor: pointer;
+	text-decoration:underline;
 		}
 
 		.Webshop:Hover {
 			color: #1D3557;
 		}
+.dropdown-content {
+display: none;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+background-color: #F1FAEE;
+min-width: 350px;
+box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+z-index: 1;
+text-align: center;
+border: 1px solid #1D3557;
+border-top: none;
+}
+
+.dropdown-content a {
+color: #1D3557;
+padding: 16px 12px;
+text-decoration: none;
+display: block;
+font-size: 24px;
+border-bottom: 1px solid #1D3557;
+}
+
+.dropdown-content a:last-child {
+border-bottom: none;
+}
+
+.dropdown-content a:hover {
+background-color: #A8DADC;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
 
 		.Account {
 			height: 160px;
@@ -109,6 +158,9 @@
 			text-decoration: underline;
 			font-size: 48px;
 			font-family: 'arial';
+	display: block;
+	cursor: pointer;
+	text-decoration:underline;
 		}
 
 		.Account:Hover {
@@ -128,6 +180,9 @@
 			text-decoration: underline;
 			font-size: 48px;
 			font-family: 'arial';
+	display: block;
+	cursor: pointer;
+	text-decoration:underline;
 		}
 
 		.Contact:Hover {
@@ -268,11 +323,15 @@
 			font-size: 15px;
 			float: right;
 			outline: 2px solid #1D3557
+      cursor: pointer;
 		}
+    .button:hover{
+			color: #1D3557;
+      cursor: pointer;
+    }
 	</Style>
 
-</head>
-
+  <body>
 <body>
 	<div class="ContainerBoven">
 		<div class="bovensteSector">
@@ -285,12 +344,17 @@
 		</div>
 		<div class="Knopvlak">
 			<div class="Container">
-				<div class="Reserveren"><br>RESERVEREN</div>
-					<div class="Webshop"><br>WEBSHOP</div>
-						<div class="Account"><br>ACCOUNT</div>
-							<div class="Contact"><br>CONTACT</div>
+				<a href="Reserveren.html" class="Reserveren"><br>RESERVEREN</a>
+					<div class="dropdown">
+						<div class="Webshop"><br>WEBSHOP</div>
+							<div class="dropdown-content">
+								<a href="menu.html">RESTAURANTMENU</a>
+								<a href="artikelen.html">SPORTARTIKELEN</a>
 							</div>
 						</div>
+						<a href="Account" class="Account"><br>ACCOUNT</a>
+							<a href="Contact" class="Contact"><br>CONTACT</a>
+					</div>
 						<div class="Typvlak">
 							<div class="Typvlak2">
 								<div class="Baanveld1">VELD.1</div>
@@ -299,66 +363,79 @@
 								<div class="Baanveld4">VELD.4</div>
 							</div>
 							<div class="BaanwaardenCompleet">
+<!--baan1-->
 								<div class="Baanwaarden1">
-									<br>9.00 - 10.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
-								</div>
-								<div class="Baanwaarden1">
-									<br>11.00 - 12.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
-								</div>
-								<div class="Baanwaarden1">
-									<br>13.00 - 14.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+									<br>9.00 - 10.30<br><br>BINNENBAAN<br><br><br><br>€X,-
+        <a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
 								</div>
 								<div class="Baanwaarden1">
-									<br>15.00 - 16.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+									<br>11.00 - 12.30<br><br>BINNENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
 								</div>
-
-								<!--Deze sector onder veld 2 op een of andere manier brengen-->
+								<div class="Baanwaarden1">
+									<br>13.00 - 14.30<br><br>BINNENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
+								</div>
+								<div class="Baanwaarden1">
+									<br>15.00 - 16.30<br><br>BINNENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
+								</div>
+<!--baan2-->
 								<div class="Baanwaarden2">
-									<br>9.00 - 10.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+									<br>9.00 - 10.30<br><br>BINNENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
 								</div>
 								<div class="Baanwaarden2">
-									<br>11.00 - 12.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+									<br>11.00 - 12.30<br><br>BINNENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
 								</div>
 								<div class="Baanwaarden2">
-									<br>13.00 - 14.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+									<br>13.00 - 14.30<br><br>BINNENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
 								</div>
 								<div class="Baanwaarden2">
-									<br>15.00 - 16.30<br><br>BINNENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+									<br>15.00 - 16.30<br><br>BINNENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
 								</div>
-
-								<!--Deze sector onder veld 3 op een of andere manier brengen-->
+<!--baan3-->
 								<div class="Baanwaarden3">
-									<br>9.00 - 10.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
-								</div>
-								<div class="Baanwaarden3">
-									<br>11.00 - 12.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+									<br>9.00 - 10.30<br><br>BUITENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
 								</div>
 								<div class="Baanwaarden3">
-									<br>13.00 - 14.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+									<br>11.00 - 12.30<br><br>BUITENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
 								</div>
 								<div class="Baanwaarden3">
-									<br>15.00 - 16.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+									<br>13.00 - 14.30<br><br>BUITENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
 								</div>
-								<!--Deze sector onder veld 4 op een of andere manier brengen-->
+								<div class="Baanwaarden3">
+									<br>15.00 - 16.30<br><br>BUITENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
+								</div>
+<!--baan4-->
 								<div class="Baanwaarden4">
-									<br>9.00 - 10.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+									<br>9.00 - 10.30<br><br>BUITENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
 								</div>
 								<div class="Baanwaarden4">
-									<br>11.00 - 12.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+									<br>11.00 - 12.30<br><br>BUITENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
 								</div>
 								<div class="Baanwaarden4">
-									<br>13.00 - 14.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+									<br>13.00 - 14.30<br><br>BUITENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
 								</div>
 								<div class="Baanwaarden4">
-									<br>15.00 - 16.30<br><br>BUITENBAAN<br><br><br><br>€X,-<button class="button">RESERVEREN</button>
+									<br>15.00 - 16.30<br><br>BUITENBAAN<br><br><br><br>€X,-
+				<a href="Reserveerknop.html"><button class="button">RESERVEREN</button></a>
 								</div>
 							</div>
-
+              </div>
 						</div>
-					</div>
-				</div>
-			</div>
 
 
+  </body>
 
-</body>
+
