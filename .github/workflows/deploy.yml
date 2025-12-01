@@ -27,6 +27,7 @@ jobs:
       env:
         ConnectionStrings.DefaultConnection: ${{ secrets.DB_CONNECTION_STRING }}
     # 3. Bouw de website (Compileren)
+    
     - name: 🏗️ Bouwen en Publiceren
       run: dotnet publish "Central Sports.csproj" -c Release -o ./publish_output --self-contained true -r win-x64
 
