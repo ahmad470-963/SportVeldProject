@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Betaling";
+    var baan = ViewBag.Baan;
+    var tijd = ViewBag.Tijd;
+}
+
+<h1>Betaling voor @baan</h1>
+<p>Tijd: @tijd</p>
+
+<form method="post" action="/Home/BevestigBetaling">
+    <label>Betaalmethode:</label><br />
+    <select name="betaalmethode">
+        <option value="ideal">iDEAL</option>
+        <option value="creditcard">Creditcard</option>
+        <option value="paypal">PayPal</option>
+    </select><br /><br />
+
+    <button type="submit" style="padding:5px 10px; background-color:#28a745; color:white; border:none; border-radius:5px;">
+        Betaal en reserveer
+    </button>
+</form>

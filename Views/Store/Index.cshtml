@@ -1,0 +1,35 @@
+﻿@model List<Central_Sports.Models.Product>
+
+<h1 class="text-center my-4">Store</h1>
+
+<h2 class="text-center">Alle producten zijn exclusief beschikbaar bij de balie</h2>
+
+<div class="container">
+    <div class="row g-4">
+        @foreach (var product in Model)
+        {
+            <div class="col-6 col-md-4 col-lg-3">
+                <a asp-controller="Store" asp-action="Details" asp-route-id="@product.Id"
+                   class="text-decoration-none text-dark">
+
+                    <div class="card border-0">
+                        <img src="@product.AfbeeldingUrl" class="card-img-top" style="object-fit:cover; height:300px;" />
+
+                        <div class="card-body text-center">
+                            <h5 class="card-title">@product.Naam</h5>
+                            <p class="card-text">€@product.Prijs</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .card:hover {
+        opacity: 0.85;
+        cursor: pointer;
+        transition: .2s;
+    }
+</style>
