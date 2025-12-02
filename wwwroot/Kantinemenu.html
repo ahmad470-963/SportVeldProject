@@ -1,0 +1,348 @@
+<head>
+	<!--kantine-->
+	<Style>
+		body {
+			margin: 0px;
+			background-color: #457B9D;
+		}
+
+		.ContainerBoven {}
+
+		.bovensteSector {
+			height: 250px;
+			width: 1800px;
+			background-color: #A8DADC
+		}
+
+		#Central_Sports {
+			font-size: 48px;
+			font-family: 'arial';
+			position: relative;
+			left: 0px;
+			color: #E63946;
+		}
+
+		#Logo {
+			background-color: coral;
+			position: realtive;
+			float: right;
+			height: 250px;
+			width: 250px;
+		}
+
+		#Central_Sports span {
+			background-color: #F1FAEE;
+			outline: 8px solid #F1FAEE;
+		}
+
+		#Vultekst {
+			font-family: 'arial';
+			color: #E63946;
+		}
+
+		#Vultekst span {
+			background-color: #F1FAEE;
+			outline: 8px solid #F1FAEE;
+		}
+
+		.Knopvlak {
+			width: 1800px;
+			height: 200px;
+			background-color: #1D3557;
+      margin-bottom:20px;
+		}
+
+		.Container {
+			display: flex;
+			column-gap 0px;
+			font-weight: bold;
+			font-family: 'arial'
+		}
+
+		.Reserveren {
+			height: 160px;
+			width: 350px;
+			background-color: #F1FAEE;
+			color: #E63946;
+			margin-top: 20px;
+			margin-right: 40px;
+			margin-bottom: 20px;
+			margin-left: 40px;
+			text-align: center;
+			text-decoration: underline;
+			font-size: 48px;
+			font-family: 'arial';
+			font-color: #1D3557;
+			display: block;
+			cursor: pointer;
+			text-decoration: underline;
+
+		}
+
+		.Reserveren:Hover {
+			color: #1D3557;
+		}
+
+		.Webshop {
+			height: 160px;
+			width: 350px;
+			background-color: #F1FAEE;
+			color: #1D3557;
+			margin-top: 20px;
+			margin-right: 40px;
+			margin-bottom: 20px;
+			margin-left: 40px;
+			text-align: center;
+			text-decoration: underline;
+			font-size: 48px;
+			font-family: 'arial';
+			display: block;
+			cursor: pointer;
+			text-decoration: underline;
+		}
+
+		.Webshop:Hover {
+			color: #1D3557;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #F1FAEE;
+			min-width: 350px;
+			box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+			text-align: center;
+			border: 1px solid #1D3557;
+			border-top: none;
+		}
+
+		.dropdown-content a {
+			color: #1D3557;
+			padding: 16px 12px;
+			text-decoration: none;
+			display: block;
+			font-size: 24px;
+			border-bottom: 1px solid #1D3557;
+		}
+
+		.dropdown-content a:last-child {
+			border-bottom: none;
+		}
+
+		.dropdown-content a:hover {
+			background-color: #A8DADC;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.Account {
+			height: 160px;
+			width: 350px;
+			background-color: #F1FAEE;
+			color: #E63946;
+			margin-top: 20px;
+			margin-right: 40px;
+			margin-bottom: 20px;
+			margin-left: 40px;
+			text-align: center;
+			text-decoration: underline;
+			font-size: 48px;
+			font-family: 'arial';
+			display: block;
+			cursor: pointer;
+			text-decoration: underline;
+		}
+
+		.Account:Hover {
+			color: #1D3557;
+		}
+
+		.Contact {
+			height: 160px;
+			width: 350px;
+			background-color: #F1FAEE;
+			color: #E63946;
+			margin-top: 20px;
+			margin-right: 40px;
+			margin-bottom: 20px;
+			margin-left: 40px;
+			text-align: center;
+			text-decoration: underline;
+			font-size: 48px;
+			font-family: 'arial';
+			display: block;
+			cursor: pointer;
+			text-decoration: underline;
+		}
+
+		.Contact:Hover {
+			color: #1D3557;
+		}
+
+		.Typvlak {
+			Background-color: #F1FAEE;
+			height: 800px;
+			width: 800px;
+      border: solid;	
+      border-width:4px;	
+      border-color:#1D3557;
+      margin-bottom:20px;
+    }
+
+		.Typvlak2 {
+			display: flex;
+      font-size: 40px;
+			font-family: 'arial';
+			font-weight: bold;
+      color:#E63946;
+      padding-left:10px;
+      padding-top:10px;
+		}
+		.Typvlak3 {
+			Background-color: #F1FAEE;
+			height: 800px;
+			width: 800px;
+			border: solid;
+			border-width:4px;
+			border-color:#1D3557;
+      
+		}
+    .Titelvlak{
+      position: relative;
+      left:250px;
+      outline:4px solid #1D3557;
+      color:#E63946;
+      background-color:#F1FAEE;
+      margin-left:0px;
+      width:250px;
+      height:60px;
+			text-align: center;      
+      font-size:48px;
+			font-family: 'arial';
+			font-weight: bold;
+      padding-top:10px;   
+      }
+    .Tussenstuk{
+      background-color:#457B9D;
+      height:220px;
+      width:1800px;
+    }
+
+    .Eten{
+      position: relative;
+      top:;
+      left:20px;
+    }
+    .Drinken{
+      position: relative;
+      top:-898px;
+      left:850px;
+    }
+
+
+	</Style>
+
+</head>
+
+<body>
+	<div class="ContainerBoven">
+		<div class="bovensteSector">
+			<div id="Logo"></div>
+			<br>
+			<h1 id="Central_Sports"><span>CENTRAL SPORTS</span></h1>
+			<h1 id="Vultekst"><span>LOREM IPSUM</span></h1>
+			<br>
+  </div>
+		</div>
+		<div class="Knopvlak">
+			<div class="Container">
+				<a href="Reserveren.html" class="Reserveren"><br>RESERVEREN</a>
+					<div class="dropdown">
+						<div class="Webshop"><br>WEBSHOP</div>
+							<div class="dropdown-content">
+								<a href="menu.html">RESTAURANTMENU</a>
+								<a href="artikelen.html">SPORTARTIKELEN</a>
+							</div>
+						</div>
+						<a href="Account" class="Account"><br>ACCOUNT</a>
+							<a href="Contact" class="Contact"><br>CONTACT</a>
+					</div>
+			</div>
+<!--Eten--><div class="Eten">
+<div class="Titelvlak">ETEN</div>
+			<div class="Typvlak">
+				<div class="Typvlak2">
+		
+1.&nbsp; product
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bevat X, Y, Z
+<br>
+2.&nbsp; product
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bevat X, Y, Z
+<br>
+3.&nbsp; product
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bevat X, Y, Z
+<br>
+4.&nbsp; product
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bevat X, Y, Z
+<br>
+5.&nbsp; product
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bevat X, Y, Z
+<br>
+6.&nbsp; product
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bevat X, Y, Z
+
+    
+				</div>
+				</div>
+        </div>
+
+<!--Drinken--><div class="Drinken">
+<div class="Titelvlak">DRINKEN</div>
+      <div class="Typvlak3">
+			<div class="Typvlak2">
+
+1.&nbsp; product
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bevat X, Y, Z
+<br>
+2.&nbsp; product
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bevat X, Y, Z
+<br>
+3.&nbsp; product
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bevat X, Y, Z
+<br>
+4.&nbsp; product
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bevat X, Y, Z
+<br>
+5.&nbsp; product
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bevat X, Y, Z
+<br>
+6.&nbsp; product
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bevat X, Y, Z
+			</div>
+      </div>
+</div>
+
+
+</body>
