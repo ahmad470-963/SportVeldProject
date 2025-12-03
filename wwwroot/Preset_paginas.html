@@ -1,4 +1,5 @@
 <head>
+	<!--preset-->
 	<Style>
 		body {
 			margin: 0px;
@@ -112,6 +113,8 @@
 			transform: translateX(-50%);
 			background-color: #F1FAEE;
 			min-width: 350px;
+			max-width:;
+			max-height:;
 			box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 			z-index: 1;
 			text-align: center;
@@ -175,7 +178,7 @@
 			height: 160px;
 			width: 350px;
 			background-color: #F1FAEE;
-			color: #E63946;
+			color: #1D3557;
 			margin-top: 20px;
 			margin-right: 40px;
 			margin-bottom: 20px;
@@ -195,7 +198,7 @@
 
 		.Typvlak {
 			Background-color: #F1FAEE;
-			height: 2000px;
+			height: 500px;
 			width: 1800px;
 		}
 
@@ -206,32 +209,22 @@
 			text-decoration: underline;
 			font-family: 'arial';
 		}
+		
 
 		.Typvlak2 {
 			Background-color: #F1FAEE;
 			height: 800px;
 			width: 1800px;
 			font-family: 'arial';
-			font-size: 24px;
-			text-decoration: underline;
-			text-decoration-color: #1D3557;
-			text-decoration-thickness: 5px;
-			text-align: center;
+			font-size: 30px;
+			color:#E63946;		
+			font-weight:bold;	
+
 			top-margin: px;
 			right-margin: 10px;
 			Bottom-margin: 10px;
 			Left-margin: 10px;
-
-		}
-
-		.Fotolocatie {
-			height: 250px;
-			width: 400px;
-			Margin-left: 100px;
-			border: 5px solid #1D3557;
-			Background-color: #F1FAEE;
-		}
-
+			}
 	</Style>
 
 
@@ -249,7 +242,12 @@
 		</div>
 		<div class="Knopvlak">
 			<div class="Container">
-				<a href="Reserveren.html" class="Reserveren"><br>RESERVEREN</a>
+				<div class="dropdown">
+					<a href="Reserveren.html" class="Reserveren"><br>RESERVEREN</a>						
+						<div class="dropdown-content">
+							<img src="Plattegrond.jpg" alt="Plattegrond"></a>
+						</div>
+					</div>
 					<div class="dropdown">
 						<div class="Webshop"><br>WEBSHOP</div>
 							<div class="dropdown-content">
@@ -261,11 +259,3 @@
 							<a href="Contact.html" class="Contact"><br>CONTACT</a>
 					</div>
 			</div>
-<div class="Typvlak">
-
-
-
-
-</div>
-
-</body>
