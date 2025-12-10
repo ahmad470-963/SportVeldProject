@@ -19,10 +19,17 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '8.0.x' # Pas dit aan als jullie .NET 6 of 7 gebruiken
+      # 2.5 Vervang de placeholder door het echte geheim
+    - name: 🔐 Connection String instellen
+      uses: microsoft/variable-substitution@v1
+      with:
+        files: 'appsettings.json'
+      env:
+        ConnectionStrings.DefaultConnection: ${{ secrets.DB_CONNECTION_STRING }}
 
-    # 3. Bouw de website (Compileren)
+# 3. Bouw de website (Compileren)
     - name: 🏗️ Bouwen en Publiceren
-      run: dotnet publish -c Release -o ./publish_output
+      run: dotnet publish Central_Sports.csproj -c Release -o ./publish_output --self-contained true -r win-x64
 
     # 4. Uploaden naar SmarterASP via FTP
     - name: 📂 Uploaden naar FTP
