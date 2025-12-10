@@ -3,9 +3,9 @@
     public class Product
     {
         public int Id { get; set; }
-        public string Naam { get; set; }
-        public string Beschrijving { get; set; }
-        public decimal Prijs { get; set; }
-        public string AfbeeldingUrl { get; set; }
+        public string Name { get; set; } = "";
+        public string Description { get; set; } = "";
+        public decimal Price { get; set; }
+        public string ImageUrl { get; set; } = "";
     }
 }

@@ -3,6 +3,7 @@ using Central_Sports.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 
 
@@ -36,26 +37,52 @@ namespace Central_Sports.Controllers
         {
             return View();
         }
+        public IActionResult Winkelwagen()
+        {
+            return View();
+        }
+        public IActionResult Contact()
+        {
+            return View();
+        }
+        public IActionResult Kantine()
+        {
+            return View();
+        }
+        public IActionResult Account()
+        {
+            return View();
+        }
 
 
         [Authorize]
         public IActionResult Betalen(string baan, string tijd)
         {
-            ViewBag.Baan = baan;
-            ViewBag.Tijd = tijd;
-            return View();
+            var model = new Bevestiging
+            {
+                Baan = baan,
+                Tijd = tijd
+            };
+
+            return View(model);
         }
 
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult BevestigBetaling(string betaalmethode)
         {
-            ViewBag.Betaalmethode = betaalmethode;
+
+       
+            Bevestiging bevestiging = new Bevestiging();
+            bevestiging.Betaalmethode = betaalmethode;
 
             var userEmail = User.Identity.Name;
-            ViewBag.Emailgebruiker=userEmail;
+         
+            bevestiging.Gebruikersnaam = userEmail; 
 
-            return View("Bevestiging");
+
+            return View("Bevestiging",bevestiging);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

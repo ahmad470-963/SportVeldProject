@@ -1,0 +1,67 @@
+﻿@model List<Central_Sports.Models.Product>
+
+    <head>
+<style>
+body{
+    background-color:#457B9D;
+}
+
+.Winkelwagen{
+    border:#1D3557;
+    font-weight:bold;
+    background-color:#F1FAEE;
+    color:#E63946;
+    margin-bottom:800px;
+}
+
+
+</style>
+
+    </head>
+
+
+    <body>
+    <div class="Winkelwagen">
+<h1>WINKELWAGEN</h1>
+
+@if (Model == null || !Model.Any())
+{
+    <p>JE WINKELWAGEN IS LEEG.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Prijs</th>
+                <th>Actie</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>€@item.Price</td>
+                    <td>
+                        <form asp-controller="Winkelwagen" asp-action="RemoveFromCart" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="btn btn-danger btn-sm">Verwijderen</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><strong>Totaal:</strong></td>
+                <td colspan="2">
+                    €@Model.Sum(p => p.Price)
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+}
+</div>
+</body>

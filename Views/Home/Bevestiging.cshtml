@@ -1,12 +1,278 @@
-﻿@{
-    ViewBag.Title = "Reservering bevestigd";
-}
+﻿@model Bevestiging
+<style>
 
-<h1>Reservering bevestigd!</h1>
-<p>Je reservering is succesvol afgerond via @ViewBag.Betaalmethode.</p>
-<p>Gereserveerd door: @ViewBag.Emailgebruiker</p>
+    body {
+        margin: 0px;
+        background-color: #457B9D
+    }
 
-<a href="/Home/Index"
-   style="padding:5px 10px; background-color:#007bff; color:white; text-decoration:none; border-radius:5px;">
-    Terug naar homepagina
-</a>
+    .bovensteSector {
+        height: 250px;
+        width: 1800px;
+        background-color: #A8DADC
+    }
+
+    #Central_Sports {
+        font-size: 48px;
+        font-family: 'arial';
+        position: relative;
+        left: 0px;
+        color: #E63946;
+    }
+
+    #Logo {
+        background-color: coral;
+        position: realtive;
+        float: right;
+        height: 250px;
+        width: 250px;
+    }
+
+    #Central_Sports span {
+        background-color: #F1FAEE;
+        outline: 8px solid #F1FAEE;
+    }
+
+    #Vultekst {
+        font-family: 'arial';
+        color: #E63946;
+    }
+
+        #Vultekst span {
+            background-color: #F1FAEE;
+            outline: 8px solid #F1FAEE;
+        }
+
+    .Knopvlak {
+        width: 1800px;
+        height: 200px;
+        background-color: #1D3557;
+    }
+
+    .Container {
+        display: flex;
+        column-gap 0px;
+        color: #E63946;
+        font-weight: bold;
+    }
+
+    .Reserveren {
+        height: 160px;
+        width: 350px;
+        background-color: #F1FAEE;
+        color: #1D3557;
+        margin-top: 20px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 48px;
+        font-family: 'arial';
+        font-color: #1D3557;
+        display: block;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+        .Reserveren:Hover {
+            color: #1D3557;
+        }
+
+    .Webshop {
+        height: 160px;
+        width: 350px;
+        background-color: #F1FAEE;
+        color: #E63946;
+        margin-top: 20px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 48px;
+        font-family: 'arial';
+        display: block;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+        .Webshop:Hover {
+            color: #1D3557;
+        }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        font-family: 'arial';
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #F1FAEE;
+        min-width: 350px;
+        max-width:;
+        max-height:;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        text-align: center;
+        border: 1px solid #1D3557;
+        border-top: none;
+    }
+
+        .dropdown-content a {
+            color: #1D3557;
+            padding: 16px 12px;
+            text-decoration: none;
+            display: block;
+            font-size: 24px;
+            border-bottom: 1px solid #1D3557;
+        }
+
+            .dropdown-content a:last-child {
+                border-bottom: none;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #A8DADC;
+            }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .Webshop:Hover {
+        color: #1D3557;
+    }
+
+    .Account {
+        height: 160px;
+        width: 350px;
+        background-color: #F1FAEE;
+        color: #E63946;
+        margin-top: 20px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 48px;
+        font-family: 'arial';
+        display: block;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+        .Account:Hover {
+            color: #1D3557;
+        }
+
+    .Contact {
+        height: 160px;
+        width: 350px;
+        background-color: #F1FAEE;
+        color: #E63946;
+        margin-top: 20px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 48px;
+        font-family: 'arial';
+        display: block;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+        .Contact:Hover {
+            color: #1D3557;
+        }
+
+    .Typvlak {
+        Background-color: #F1FAEE;
+        height: 500px;
+        width: 1800px;
+    }
+
+    .TopText {
+        text-align: center;
+        font-size: 50px;
+        margin-top: 40px;
+        text-decoration: underline;
+        font-family: 'arial';
+    }
+
+
+    .Typvlak2 {
+        Background-color: #F1FAEE;
+        height: 400px;
+        width: 1190px;
+        font-family: 'arial';
+        font-size: 30px;
+        color: #E63946;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-right:10px;
+        margin-bottom:800px;
+		margin-left:10px;
+        border: 4px solid #1D3557;
+    }
+    h1{
+        font-weight:bold;
+        text-decoration:underline;
+        text-decoration-color: #1D3557;
+        margin-right:10px;
+    }
+    p{
+        margin-left: 10px;
+        color: #1D3557;
+        font-weight: bold;
+    }
+
+    #a {
+        height: 40px;
+        display: flex;
+        width: 250px;
+        font-family: 'Arial';
+        text-align: center;
+        font-weight: bold;
+        background-color: #A8DADC;
+        color: #E63946;
+        font-size: 15px;
+        padding-left: 14px;
+        margin-left: 20px;
+        margin-top:5px;
+        outline: 2px solid #1D3557;
+    }
+
+        #a:hover {
+            color: #1D3557;
+            cursor: pointer;
+        }
+    .Homeknop{
+        margin-top:8px;
+        margin-left:10px;
+    }
+
+</style>
+
+<body>
+<div class="Typvlak2">
+
+<h1>RESERVERING BEVESTIGD!</h1>
+<p>De reservering is succesvol afgerond via  @Html.DisplayFor(m => m.Betaalmethode)</p>
+<br /><br />
+<p>Gereserveerd door:  @Html.DisplayFor(m => m.Gebruikersnaam)
+</p>
+
+<br>
+
+<a id="a" href="/Home/Index">
+<div class="Homeknop">TERUG NAAR HOMEPAGINA</div></a>
+
+</div>
+</body>

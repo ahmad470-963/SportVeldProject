@@ -73,11 +73,13 @@ namespace Central_Sports.Areas.Identity.Pages.Account
 
             [Required]
             [Display(Name = "Naam")]
+            [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "De naam mag alleen letters en spaties bevatten.")]
             public string Naam { get; set; }
 
             [Required]
             [Phone]
             [Display(Name = "Telefoonnummer")]
+            [RegularExpression(@"^\d{10}$", ErrorMessage = "Voer een geldig telefoonnummer in.")]
             public string Telefoon { get; set; }
 
             /// <summary>

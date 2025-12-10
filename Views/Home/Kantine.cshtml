@@ -1,24 +1,21 @@
 ﻿@{
-    ViewData["Title"] = "Central Sports";
+    ViewData["Title"] = "Kantine";
 }
 
 <head>
+	<!--Restaurant-->
 	<Style>
 		body {
 			margin: 0px;
-			background-color: #457B9D
+			background-color: #457B9D;
 		}
 
-
-		.ContainerBoven {
-
-        }
+		.ContainerBoven {}
 
 		.bovensteSector {
 			height: 250px;
-            left:40px;
 			width: 1190px;
-			background-color: #A8DADC
+			background-color: #A8DADC;
 		}
 
 		#Central_Sports {
@@ -48,6 +45,8 @@
 		#Vultekst {
 			font-family: 'arial';
 			color: #E63946;
+            font-weight:bold;
+
 		}
 
 		#Vultekst span {
@@ -62,14 +61,14 @@
 			width: 1190px;
 			height: 200px;
 			background-color: #1D3557;
+      margin-bottom:20px;
 		}
 
 		.Container {
 			display: flex;
 			column-gap 0px;
-			color: #E63946;
 			font-weight: bold;
-
+			font-family: 'arial'
 		}
 
 		.Reserveren {
@@ -85,10 +84,10 @@
 			text-decoration: underline;
 			font-size: 30px;
 			font-family: 'arial';
-			font-color: #1D3557;
-			display: block;
-			cursor: pointer;
-			text-decoration: underline;
+	display: block;
+	cursor: pointer;
+	text-decoration:underline;
+
 		}
 
 		.Reserveren:Hover {
@@ -99,7 +98,7 @@
 			height: 160px;
 			width: 243px;
 			background-color: #F1FAEE;
-			color: #E63946;
+			color: #1D3557;
 			margin-top: 20px;
 			margin-right: 28px;
 			margin-bottom: 20px;
@@ -108,9 +107,9 @@
 			text-decoration: underline;
 			font-size: 30px;
 			font-family: 'arial';
-			display: block;
-			cursor: pointer;
-			text-decoration: underline;
+	display: block;
+	cursor: pointer;
+	text-decoration:underline;
 		}
 
 		.Webshop:Hover {
@@ -120,7 +119,6 @@
 		.dropdown-content {
 			display: none;
 			position: absolute;
-			font-family: 'arial';
 			left: 50%;
 			transform: translateX(-50%);
 			background-color: #F1FAEE;
@@ -137,7 +135,7 @@
 			padding: 16px 12px;
 			text-decoration: none;
 			display: block;
-			font-size: 30px;
+			font-size: 24px;
 			border-bottom: 1px solid #1D3557;
 		}
 
@@ -158,10 +156,6 @@
 			display: inline-block;
 		}
 
-		.Webshop:Hover {
-			color: #1D3557;
-		}
-
 		.Account {
 			height: 160px;
 			width: 243px;
@@ -175,9 +169,9 @@
 			text-decoration: underline;
 			font-size: 30px;
 			font-family: 'arial';
-			display: block;
-			cursor: pointer;
-			text-decoration: underline;
+	display: block;
+	cursor: pointer;
+	text-decoration:underline;
 		}
 
 		.Account:Hover {
@@ -197,9 +191,9 @@
 			text-decoration: underline;
 			font-size: 30px;
 			font-family: 'arial';
-			display: block;
-			cursor: pointer;
-			text-decoration: underline;
+	display: block;
+	cursor: pointer;
+	text-decoration:underline;
 		}
 
 		.Contact:Hover {
@@ -208,58 +202,67 @@
 
 		.Typvlak {
 			Background-color: #F1FAEE;
-			height: 1500px;
-			width: 1190px;
-		}
-
-		.TopText {
-			text-align: center;
-			font-size: 50px;
-			margin-top: 40px;
-			text-decoration: underline;
-			font-family: 'arial';
-		}
+			height: 556px;
+			width: 556px;
+      border: solid;	
+      border-width:4px;	
+      border-color:#1D3557;
+      margin-bottom:20px;
+    }
 
 		.Typvlak2 {
-			Background-color: #F1FAEE;
-			height: 800px;
-			width: 1190px;
+			display: flex;
+      font-size: 28px;
 			font-family: 'arial';
-			font-size: 24px;
-			text-decoration: underline;
-			text-decoration-color: #1D3557;
-			text-decoration-thickness: 5px;
-			text-align: center;
-			top-margin: px;
-			right-margin: 0px;
-			Bottom-margin: 10px;
-			Left-margin: 10px;
-
+			font-weight: bold;
+      color:#E63946;
+      padding-left:10px;
+      padding-top:10px;
 		}
-
-		.Fotolocatie {
-			height: 174px;
-			width: 278px;
-			Margin-left: 75px;
-			border: 5px solid #1D3557;
+		.Typvlak3 {
 			Background-color: #F1FAEE;
+			height: 556px;
+			width: 556px;
+			border: solid;
+			border-width:4px;
+			border-color:#1D3557;
+      
 		}
+    .Titelvlak{
+      position: relative;
+      left:4px;
+      outline:4px solid #1D3557;
+      color:#E63946;
+      background-color:#F1FAEE;
+      margin-left:0px;
+      width:250px;
+      height:60px;
+			text-align: center;      
+      font-size:48px;
+			font-family: 'arial';
+			font-weight: bold;
+      }
+    .Tussenstuk{
+      background-color:#457B9D;
+      height:220px;
+      width:1190px;
+    }
 
+    .Eten{
+      position: relative;
+      top:;
+      left:20px;
+    }
+    .Drinken{
+      position: relative;
+      top:-636px;
+      left:600px;
+    }
+	h1{
+		font-weight:bold;
+	}
 
-		h1 {
-			font-size: 36px;
-			font-weight:bold;
-			text-decoration: underline;
-			text-decoration-color: #1D3557;
-			text-decoration-thickness: 8px;
-            margin-left:20px;
-		}
-
-		h1: first-child {
-			font-size 12px;
-		}
 	</Style>
-
 
 </head>
 
@@ -268,8 +271,8 @@
 		<div class="bovensteSector">
 			<div id="Logo"></div>
 			<br>
-			<h1 id="Central_Sports"><span>&nbsp;CENTRAL SPORTS</span></h1>
-			<h1 id="Vultekst"><span>&nbsp;LOREM IPSUM</span></h1>
+			<h1 id="Central_Sports"><span>CENTRAL SPORTS</span></h1>
+			<h1 id="Vultekst"><span>LOREM IPSUM</span></h1>
 			<br>
   </div>
 		</div>
@@ -293,45 +296,75 @@
 							<a asp-controller="Home" asp-action="Contact" class="Contact"><br>CONTACT</a>
 					</div>
 			</div>
-			<div class="Container">
-				<div class="Typvlak">
-					<div class="TopText">CLUBNIEUWS</div><br><br><br><br>
-					<div class="Container">
-						<div class="Typvlak2" id="Nieuws1">
-							
-							<div class="Fotolocatie">
-<img src="LinkFoto" alt="NieuwsFoto" class="Nieuwsfoto">
+<!--Eten-->
+<div class="Eten">
+<div class="Titelvlak">ETEN</div>
+			<div class="Typvlak">
+				<div class="Typvlak2">
+		
+1.&nbsp; TOSTI - €3.99
+<br>
 
-							</div>
-							<h1>DE WINTERDAGEN ZIJN ER</h1>
-							<br>
-                DE BUITENVELDEN EN DE KANTINE ZULLEN VEEL VERANDEREN DEZE DAGEN
-              </div>
-							<div class="Typvlak2" id="Nieuws2">
-								<div class="Fotolocatie">
-<img src="LinkFoto" alt="NieuwsFoto" class="Nieuwsfoto">
+<br>
+2.&nbsp; BROODJE GEZOND - €3.49
+<br>
 
-								</div>
+<br>
+3.&nbsp; BROODJE HAM/KAAS - €3.49
+<br>
 
-								<h1>WELKOM BIJ CENTRAL SPORTS</h1>
-								<br>
-                CENTRAL SPORTS IS SINDS 19 NOVEMBER OPEN VOOR IEDEREEN!
-              </div>
-								<div class="Typvlak2" id="Nieuws3">
-									<div class="Fotolocatie">
-<img src="LinkFoto" alt="NieuwsFoto" class="Nieuwsfoto">
+<br>
+4.&nbsp; FRUITSCHAAL - €5.99
+<br>
 
-									</div>
+<br>
+5.&nbsp; WOSTENBROODJE / FRIKANDELBROODJE - €1.99
+<br>
 
-									<h1>EEN NIEUW ASSORTIMENT</h1>
-									<br>
-                CENTRAL SPORTS MERCH: NU BESCHIKBAAR BIJ ONZE BALIE
-                </div>
-								</div>
-							</div>
+<br>
+6.&nbsp; BROODJE KROKET - €1.99
+<br>
 
-						</div>
 
+    
+				</div>
+				</div>
+        </div>
+
+<!--Drinken-->
+<div class="Drinken">
+<div class="Titelvlak">DRINKEN</div>
+      <div class="Typvlak3">
+			<div class="Typvlak2">
+
+1.&nbsp; ICETEA - €2.99
+<br>
+
+<br>
+2.&nbsp; WATER - €1.49
+<br>
+
+<br>
+3.&nbsp; SMOOTHIE MET DIVERSE FRUIT - €3.49
+<br>
+
+<br>
+4.&nbsp; SPORTDRANK  -€2.49
+<br>
+
+<br>
+5.&nbsp; COLA - €2.99
+<br>
+
+<br>
+6.&nbsp; FANTA - €2.99
+<br>
+
+			</div>
+      </div>
+</div>
 
 
 </body>
+
+

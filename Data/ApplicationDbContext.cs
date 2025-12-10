@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Central_Sports.Models;
 
 namespace Central_Sports.Data
 {
@@ -9,5 +10,8 @@ namespace Central_Sports.Data
             : base(options)
         {
         }
+
+        // Add this DbSet property for Products
+        public DbSet<Product> Products { get; set; }
     }
 }
